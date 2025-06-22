@@ -23,6 +23,18 @@ build:
 
 requirements:
   build:
+    - cross-r-base {{ r_base }}  # [build_platform != target_platform]
+    - r-ryacas                   # [build_platform != target_platform]
+    - r-foreach                  # [build_platform != target_platform]
+    - r-doparallel               # [build_platform != target_platform]
+    - r-diagrammer               # [build_platform != target_platform]
+    - r-nnls                     # [build_platform != target_platform]
+    - r-progress                 # [build_platform != target_platform]
+    - r-ape                      # [build_platform != target_platform]
+    - r-rcppprogress             # [build_platform != target_platform]
+    - r-data.table               # [build_platform != target_platform]
+    - r-rcpp                     # [build_platform != target_platform]
+    - r-matrix                   # [build_platform != target_platform]
     - {{ compiler('c') }}              # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
     - {{ compiler('cxx') }}            # [not win]
