@@ -34,7 +34,6 @@ requirements:
     - {{ posix }}zip               # [win]
     - {{ stdlib("c") }}
     - cross-r-base {{ r_base }}    # [build_platform != target_platform]
-    - libstdcxx !=14.3.0,!=15.1.0           # [win]
     - r-diagrammer                 # [build_platform != target_platform]
     - r-matrix                     # [build_platform != target_platform]
     - r-rcpp >=1.0.5               # [build_platform != target_platform]
@@ -72,8 +71,6 @@ requirements:
     - r-foreach
     - r-nnls
     - r-progress
-  run_constrained:
-    - libstdcxx !=14.3.0,!=15.1.0           # [win]
 
 test:
   commands:
