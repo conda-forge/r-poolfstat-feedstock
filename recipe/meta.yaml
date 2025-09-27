@@ -12,7 +12,7 @@ source:
   sha256: 299cb6787c3a3ccccc4555bc9f87a02eb0c882ea478f31f1fb8abfbf2a59e0dc
 
 build:
-  number: 1
+  number: 2
   rpaths:
     - lib/R/lib/
     - lib/
@@ -34,7 +34,6 @@ requirements:
     - {{ posix }}zip               # [win]
     - {{ stdlib("c") }}
     - cross-r-base {{ r_base }}    # [build_platform != target_platform]
-    - libstdcxx !=14.3.0,!=15.1.0           # [win]
     - r-diagrammer                 # [build_platform != target_platform]
     - r-matrix                     # [build_platform != target_platform]
     - r-rcpp >=1.0.5               # [build_platform != target_platform]
@@ -72,8 +71,6 @@ requirements:
     - r-foreach
     - r-nnls
     - r-progress
-  run_constrained:
-    - libstdcxx !=14.3.0,!=15.1.0           # [win]
 
 test:
   commands:
